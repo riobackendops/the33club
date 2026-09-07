@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The 33 Club | Watch Live</title>
+<meta name="description" content="The 33 Club — Coins & Bullion. Gold, Silver, Platinum. Watch us live on eBay Live, TikTok Live, and Whatnot.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="The 33 Club | Watch Live">
+<meta property="og:description" content="Coins & Bullion — Gold, Silver, Platinum. Live on eBay Live, TikTok Live, and Whatnot.">
+<meta property="og:image" content="assets/the33club-emblem.jpg">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="assets/the33club-emblem.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --gold: #d4af37;
+    --gold-light: #f6dfa0;
+    --gold-dim: #8a6c1f;
+    --black: #08070a;
+    --card: #ffffff;
+    --muted: #b8ac8a;
+  }
+
+  *{ box-sizing: border-box; margin:0; padding:0; }
+
+  html,body{ min-height:100%; background: var(--black); }
+
+  body{
+    font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    background:
+      radial-gradient(90% 50% at 50% 0%, rgba(212,175,55,0.28) 0%, rgba(212,175,55,0.08) 30%, rgba(0,0,0,0) 60%),
+      radial-gradient(140% 90% at 50% 100%, rgba(40,30,0,0.55) 0%, rgba(0,0,0,0) 55%),
+      #060506;
+    min-height:100vh;
+  }
+
+  .page{
+    width:100%;
+    max-width:460px;
+    padding: 48px 20px 40px;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  /* fine gold corner accents, echoing the emblem's laurel rings */
+  .page::before,
+  .page::after{
+    content:"";
+    position:fixed;
+    width:34px;
+    height:34px;
+    border: 1px solid rgba(212,175,55,0.5);
+    opacity:0.85;
+    pointer-events:none;
+  }
+  .page::before{ top:18px; left:18px; border-right:none; border-bottom:none; }
+  .page::after{ bottom:18px; right:18px; border-left:none; border-top:none; }
+
+  .emblem{
+    width:132px;
+    height:132px;
+    border-radius:50%;
+    overflow:hidden;
+    mix-blend-mode: screen;
+    margin-bottom:14px;
+    filter: drop-shadow(0 6px 24px rgba(212,175,55,0.35));
+  }
+  .emblem img{ width:100%; height:100%; display:block; object-fit:cover; }
+
+  .brand-name{
+    font-family:'Cinzel', serif;
+    font-weight:600;
+    font-size:26px;
+    letter-spacing:0.06em;
+    background: linear-gradient(180deg, var(--gold-light), var(--gold) 55%, var(--gold-dim));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom:6px;
+    text-align:center;
+  }
+
+  .tagline{
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:12.5px;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    color:#e9decb;
+    margin-bottom:4px;
+  }
+
+  .sub-tagline{
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color: var(--muted);
+    margin-bottom:16px;
+  }
+  .sub-tagline .dotsep{ color: var(--gold); margin:0 6px; }
+
+  .live-pill{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background: rgba(212,175,55,0.10);
+    border:1px solid rgba(212,175,55,0.45);
+    padding:7px 14px;
+    border-radius:999px;
+    font-weight:500;
+    font-size:12.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:#f3e6bf;
+    margin-bottom:14px;
+  }
+
+  .dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background: var(--gold);
+    box-shadow: 0 0 0 0 rgba(212,175,55,0.6);
+    animation: pulse 1.8s infinite;
+    flex-shrink:0;
+  }
+  @keyframes pulse{
+    0%{ box-shadow: 0 0 0 0 rgba(212,175,55,0.55); }
+    70%{ box-shadow: 0 0 0 8px rgba(212,175,55,0); }
+    100%{ box-shadow: 0 0 0 0 rgba(212,175,55,0); }
+  }
+
+  .handle{
+    color: var(--muted);
+    font-size:14px;
+    letter-spacing:0.02em;
+    margin-bottom:40px;
+  }
+
+  .section-label{
+    align-self:flex-start;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color: var(--muted);
+    margin: 0 0 12px 4px;
+  }
+
+  .links{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    margin-bottom:34px;
+  }
+
+  .link-card{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    background: var(--card);
+    border-radius:16px;
+    padding:14px 16px;
+    text-decoration:none;
+    color:#111;
+    box-shadow: 0 10px 26px rgba(0,0,0,0.4);
+    border: 1px solid rgba(212,175,55,0.25);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .link-card:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 14px 34px rgba(212,175,55,0.28);
+  }
+  .link-card:active{ transform: translateY(0px) scale(0.99); }
+
+  .link-logo{
+    width:52px;
+    height:52px;
+    border-radius:10px;
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#fff;
+    overflow:hidden;
+  }
+  .link-logo img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+  }
+  .link-logo.whatnot{ background:#231f20; }
+  .link-logo.whatnot img{ width:40px; height:40px; }
+
+  .link-copy{ flex:1; min-width:0; }
+  .link-title{
+    font-weight:700;
+    font-size:16.5px;
+    letter-spacing:0.01em;
+    color:#111;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .link-sub{
+    font-size:12.5px;
+    color:#666;
+    margin-top:2px;
+  }
+
+  .chevron{ flex-shrink:0; color:#b7b7b7; }
+
+  .mini-live{
+    display:inline-block;
+    font-size:9.5px;
+    font-weight:700;
+    letter-spacing:0.08em;
+    color:#3a2c02;
+    background: var(--gold);
+    padding:2px 6px;
+    border-radius:5px;
+  }
+
+  footer{
+    margin-top:auto;
+    padding-top:10px;
+    text-align:center;
+    color: rgba(255,255,255,0.32);
+    font-size:11.5px;
+    letter-spacing:0.03em;
+  }
+
+  @media (min-width:480px){ .page{ padding-top:64px; } }
+</style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="emblem">
+      <img src="assets/the33club-emblem.jpg" alt="The 33 Club">
+    </div>
+
+    <div class="brand-name">THE 33 CLUB</div>
+    <div class="tagline">Coins &amp; Bullion</div>
+    <div class="sub-tagline">Gold<span class="dotsep">•</span>Silver<span class="dotsep">•</span>Platinum</div>
+
+    <span class="live-pill"><span class="dot"></span>Live Streams Daily</span>
+    <div class="handle">@the33club</div>
+
+    <div class="section-label">Watch Us Live</div>
+    <div class="links">
+
+      <a class="link-card" href="https://www.ebay.com/ebaylive/sellers/pgdkk2zgqmq" target="_blank" rel="noopener">
+        <div class="link-logo">
+          <img src="assets/ebay-live-logo.jpg" alt="eBay Live">
+        </div>
+        <div class="link-copy">
+          <div class="link-title">Watch on eBay Live <span class="mini-live">LIVE</span></div>
+          <div class="link-sub">@the33club</div>
+        </div>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+      <a class="link-card" href="https://www.tiktok.com/@the33clubcoins" target="_blank" rel="noopener">
+        <div class="link-logo">
+          <img src="assets/tiktok-icon.png" alt="TikTok Live" style="width:32px;height:32px;">
+        </div>
+        <div class="link-copy">
+          <div class="link-title">Watch on TikTok Live <span class="mini-live">LIVE</span></div>
+          <div class="link-sub">@the33clubcoins</div>
+        </div>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+      <a class="link-card" href="https://www.whatnot.com/s/JgNWZbnt" target="_blank" rel="noopener">
+        <div class="link-logo whatnot">
+          <img src="assets/whatnot-logo.png" alt="Whatnot">
+        </div>
+        <div class="link-copy">
+          <div class="link-title">Watch on Whatnot <span class="mini-live">LIVE</span></div>
+          <div class="link-sub">@the33club</div>
+        </div>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+    </div>
+
+    <footer>© 2026 The 33 Club · Coins &amp; Bullion</footer>
+  </div>
+</body>
+</html>
